@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE & META -->
+    <title>Agência de Marketing Digital em Sapiranga | GENTTE</title>
+    <meta name="description" content="GENTTE é a agência de marketing digital em Sapiranga que faz teu negócio aparecer no Google, no Instagram e nas inteligências artificiais. Social media, SEO, tráfego pago e visibilidade nas IAs para negócios locais do Vale do Sinos.">
+    <meta name="keywords" content="agência de marketing sapiranga, agência de marketing digital sapiranga, marketing digital sapiranga, social media sapiranga, gestão de redes sociais sapiranga, agência de publicidade sapiranga, marketing para negócios locais, agência de marketing vale do sinos, tráfego pago sapiranga, SEO sapiranga, marketing digital campo bom, marketing digital novo hamburgo, GENTTE agência">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="GENTTE">
+    <link rel="canonical" href="https://gentte.ag">
+
+    <!-- OPEN GRAPH (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gentte.ag">
+    <meta property="og:title" content="Agência de Marketing Digital em Sapiranga | GENTTE">
+    <meta property="og:description" content="Agência de marketing digital em Sapiranga. Mais clientes, mais vendas e mais faturamento pro teu negócio local. Feito por gente, pra gente.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="GENTTE">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Agência de Marketing Digital em Sapiranga | GENTTE">
+    <meta name="twitter:description" content="Agência de marketing digital em Sapiranga especializada em negócios locais. Social media, SEO e tráfego pago no Vale do Sinos.">
+
+    <!-- SCHEMA.ORG — LOCAL BUSINESS -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MarketingAgency",
+        "name": "GENTTE",
+        "alternateName": "Gentte Agência de Marketing Digital",
+        "description": "Agência de marketing digital em Sapiranga especializada em posicionamento digital para negócios locais. Fazemos teu negócio aparecer no Google, no Instagram e nas inteligências artificiais como ChatGPT e Gemini. Social media, SEO, tráfego pago e visibilidade nas IAs para o Vale do Sinos.",
+        "url": "https://gentte.ag",
+        "telephone": "+55-51-99877-0566",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sapiranga",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+        },
+        "areaServed": [
+            "Sapiranga",
+            "Campo Bom",
+            "Novo Hamburgo",
+            "Taquara",
+            "Parobé",
+            "Vale do Sinos"
+        ],
+        "serviceType": [
+            "Marketing Digital",
+            "Agência de Marketing",
+            "Social Media",
+            "SEO",
+            "Tráfego Pago",
+            "Gestão de Redes Sociais"
+        ],
+        "sameAs": [
+            "https://instagram.com/gentte.ag"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-51-99877-0566",
+            "contactType": "sales",
+            "availableLanguage": "Portuguese"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --cream: #EDEBE2;
+            --cream-mid: #E0DDD3;
+            --cream-dark: #D5D2C8;
+            --ink: #1A1816;
+            --ink-soft: #4A4740;
+            --ink-muted: #6B6965;
+            --gold: #B8956A;
+            --gold-light: #D4B896;
+            --white: #F7F5EF;
+            --dark: #141311;
+            --wpp: #25D366;
+            --wpp-dark: #1DA851;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            color: var(--ink);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 1.5rem 5rem;
+            position: relative;
+        }
+
+        .hero-mark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4.5rem, 22vw, 10rem);
+            font-weight: 300;
+            letter-spacing: 0.18em;
+            color: var(--ink);
+            line-height: 1;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+        }
+
+        .hero-rule {
+            width: 1px; height: 0;
+            background: var(--gold);
+            margin: 2rem auto;
+            animation: growLine 0.8s ease 1s forwards;
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.15rem, 4.5vw, 1.7rem);
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.55;
+            max-width: 360px;
+            opacity: 0;
+            animation: fadeIn 1s ease 1.2s forwards;
+        }
+
+        .hero-tagline em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-location {
+            font-size: 0.68rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-top: 1.25rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 1.5s forwards;
+        }
+
+        .hero-cta {
+            margin-top: 2.5rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 1.8s forwards;
+        }
+
+        .btn-wpp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--ink);
+            color: var(--cream);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.9rem 2.25rem;
+            text-decoration: none;
+            transition: background 0.25s, transform 0.2s;
+            border-radius: 2px;
+        }
+
+        .btn-wpp:active { transform: scale(0.97); }
+        .btn-wpp:hover { background: var(--ink-soft); }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            animation: fadeIn 1s ease 2.2s forwards;
+        }
+
+        .scroll-hint span {
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+        }
+
+        .scroll-line {
+            width: 1px; height: 32px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        /* ── MANIFESTO ── */
+        .manifesto {
+            background: var(--ink);
+            padding: 6rem 1.5rem;
+            text-align: center;
+        }
+
+        .manifesto p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.6rem, 6vw, 3rem);
+            font-weight: 300;
+            line-height: 1.5;
+            color: #D8D5CC;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .manifesto em { color: var(--gold); font-style: italic; }
+
+        /* ── SHARED ── */
+        .section { padding: 5rem 1.5rem; }
+        .container { max-width: 640px; margin: 0 auto; }
+
+        .eyebrow {
+            font-size: 0.65rem;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 7vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--ink);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-body {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--ink-soft);
+        }
+
+        /* ── O QUE FAZEMOS ── */
+        .fazemos-items {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .fazemos-item {
+            background: var(--white);
+            padding: 1.75rem 1.75rem;
+            border-left: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .fazemos-item:hover { border-left-color: var(--gold); }
+
+        .fazemos-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--ink);
+            margin-bottom: 0.4rem;
+        }
+
+        .fazemos-item p {
+            font-size: 0.85rem;
+            line-height: 1.75;
+            color: var(--ink-soft);
+        }
+
+        /* ── DIFERENCIAL ── */
+        .diferencial {
+            background: var(--ink);
+            color: #D8D5CC;
+        }
+
+        .diferencial .section-title { color: #E8E5DC; }
+
+        .diferencial-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--gold);
+            border-left: 1px solid var(--gold);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            line-height: 1.5;
+        }
+
+        .diferencial-body {
+            font-size: 0.9rem;
+            line-height: 1.85;
+            color: #7A7770;
+        }
+
+        /* ── COMO FUNCIONA ── */
+        .passos {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .passo {
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: 1.25rem;
+            align-items: start;
+            padding: 1.5rem 1.25rem;
+            background: var(--white);
+        }
+
+        .passo-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--cream-dark);
+            line-height: 1;
+            padding-top: 2px;
+        }
+
+        .passo h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--ink);
+            margin-bottom: 0.35rem;
+        }
+
+        .passo p {
+            font-size: 0.84rem;
+            line-height: 1.75;
+            color: var(--ink-soft);
+        }
+
+        /* ── PARA QUEM ── */
+        .para-quem {
+            background: var(--ink);
+        }
+
+        .para-quem .section-title { color: #E8E5DC; }
+
+        .tipos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .tipo {
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            padding: 0.5rem 1rem;
+            border: 1px solid #2A2825;
+            color: #504D4A;
+            transition: all 0.3s;
+        }
+
+        .tipo:hover { color: #C8C5BC; border-color: #404038; }
+
+        .para-quem-note {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            color: #6B6865;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #252320;
+        }
+
+        /* ── CTA FINAL ── */
+        .cta-final {
+            background: var(--dark);
+            padding: 6rem 1.5rem;
+            text-align: center;
+        }
+
+        .cta-final-mark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 12vw, 5.5rem);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #E8E5DC;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-final-line {
+            width: 1px; height: 45px;
+            background: var(--gold);
+            margin: 0 auto 2rem;
+        }
+
+        .cta-final-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 4vw, 1.6rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--gold-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.5;
+        }
+
+        .cta-final-sub {
+            font-size: 0.65rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #3A3835;
+            margin-top: 2rem;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid #1E1C19;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: #2E2C28;
+            text-transform: uppercase;
+        }
+
+        /* ── KEYFRAMES ── */
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes growLine { to { height: 45px; } }
+        @keyframes scrollPulse { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+        /* ── REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.85s ease, transform 0.85s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+
+        /* ── BTN DIAGNOSTICO ── */
+        .btn-diagnostico {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: transparent;
+            color: var(--gold-light);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            padding: 0.75rem 1.75rem;
+            text-decoration: none;
+            border: 1px solid #333028;
+            transition: border-color 0.25s, color 0.25s;
+            border-radius: 2px;
+        }
+        .btn-diagnostico:hover { border-color: var(--gold); color: var(--gold); }
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .cta-divider {
+            font-size: 0.62rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #3A3835;
+        }
+
+        /* ── CONTATO ── */
+        .contato {
+            background: var(--white);
+            padding: 6rem 1.5rem;
+        }
+        .contato-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .contato-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+        .contato-sub {
+            font-size: 0.88rem;
+            color: var(--ink-muted);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .form-field label {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--cream);
+            border: 1px solid var(--cream-dark);
+            color: var(--ink);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            padding: 0.8rem 1rem;
+            outline: none;
+            transition: border-color 0.25s;
+            border-radius: 0;
+            appearance: none;
+            width: 100%;
+        }
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--gold);
+        }
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: var(--cream-dark);
+        }
+        .form-field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6965' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+        .form-field textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .btn-form {
+            width: 100%;
+            background: var(--ink);
+            color: var(--cream);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.25s;
+            margin-top: 0.5rem;
+        }
+        .btn-form:hover { background: var(--gold); }
+
+        /* contato info */
+        .contato-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 4.5rem;
+        }
+        .contato-info-item {
+            background: var(--cream);
+            padding: 1.5rem 1.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            border-left: 2px solid transparent;
+            transition: border-color 0.3s;
+            text-decoration: none;
+        }
+        .contato-info-item:hover { border-left-color: var(--gold); }
+        .contato-info-icon {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .contato-info-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 0.3rem;
+        }
+        .contato-info-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--ink);
+        }
+        .contato-info-detail {
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            margin-top: 0.15rem;
+        }
+
+        @media (max-width: 768px) {
+            .contato-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .contato-info { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="hero-mark">GENTTE</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-tagline">Mais clientes.<br>Mais vendas.<br><em>Mais faturamento.</em></p>
+        <p style="font-size:0.62rem; letter-spacing:0.28em; text-transform:uppercase; color: var(--ink-muted); margin-top:0.5rem; opacity:0; animation: fadeIn 1s ease 2s forwards;">Google · Redes Sociais · Inteligências Artificiais</p>
+        <!-- SEO: keyword context for crawlers -->
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Agência de Marketing Digital em Sapiranga</span>
+        <div class="hero-cta">
+            <a class="btn-wpp" href="https://wa.me/5551998770566?text=Olá%2C%20vim%20pelo%20site%20da%20Gentte%20e%20quero%20saber%20mais!" target="_blank" rel="noopener">
+                Falar com a Gentte
+            </a>
+        </div>
+        <div class="scroll-hint">
+            <span>Saiba mais</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <div class="manifesto">
+        <p class="reveal" style="font-size: clamp(1rem, 3.5vw, 1.4rem); letter-spacing: 0.04em; color: #6B6865; margin-bottom: 2rem; font-family: 'Jost', sans-serif; font-weight: 300;">Posicionamento digital pra negócios locais.</p>
+        <p class="reveal" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 7vw, 3.4rem); font-weight: 300; line-height: 1.35; color: #E8E5DC; max-width: 800px; margin: 0 auto;">
+            Teu concorrente não é melhor que tu. <em>Ele só aparece mais.</em>
+        </p>
+    </div>
+
+    <!-- RESULTADOS CONCRETOS -->
+    <div style="background: var(--dark); padding: 3rem 1.5rem 5rem;">
+        <div style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px;">
+            <div class="reveal" style="background: #1E1C19; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--gold); line-height: 1; flex-shrink: 0;">+</span>
+                <div>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: #D8D5CC; margin-bottom: 0.35rem;">Mais clientes novos todo mês</p>
+                    <p style="font-size: 0.84rem; line-height: 1.75; color: #504D4A;">Presença digital estruturada, SEO e tráfego pago, pessoas te encontrando antes de encontrar o concorrente.</p>
+                </div>
+            </div>
+            <div class="reveal delay-1" style="background: #1E1C19; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--gold); line-height: 1; flex-shrink: 0;">+</span>
+                <div>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: #D8D5CC; margin-bottom: 0.35rem;">Mais confiança, mais conversão</p>
+                    <p style="font-size: 0.84rem; line-height: 1.75; color: #504D4A;">Marca bem posicionada gera confiança antes do contato. Quem confia, compra, e volta.</p>
+                </div>
+            </div>
+            <div class="reveal delay-2" style="background: #1E1C19; padding: 1.75rem 2rem; display: flex; align-items: flex-start; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--gold); line-height: 1; flex-shrink: 0;">+</span>
+                <div>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: #D8D5CC; margin-bottom: 0.35rem;">Mais faturamento, menos dependência de indicação</p>
+                    <p style="font-size: 0.84rem; line-height: 1.75; color: #504D4A;">Para de depender só do boca a boca e começa a receber clientes pelo digital, todo mês, de forma constante.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PESSOAS -->
+    <div style="background: var(--ink); padding: 6rem 1.5rem; text-align: center;">
+        <p class="reveal" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 5.5vw, 3rem); font-weight: 300; line-height: 1.5; color: #D8D5CC; max-width: 800px; margin: 0 auto;">
+            Pessoas não se conectam com empresas. <br>Pessoas se conectam com <em style="font-style:italic; color: #B8956A;">pessoas.</em>
+        </p>
+    </div>
+
+    <!-- O QUE FAZEMOS -->
+    <section class="section">
+        <div class="container">
+            <p class="eyebrow reveal">O que fazemos</p>
+            <h2 class="section-title reveal">Como a Gentte faz<br>teu negócio vender mais.</h2>
+            <p class="section-body reveal">Somos uma agência de marketing digital em Sapiranga que trabalha com estratégia real: cada serviço tem um propósito direto, gerar mais clientes, mais vendas e mais faturamento pro teu negócio.</p>
+            <div class="fazemos-items">
+                <div class="fazemos-item reveal">
+                    <h3>Estrutura Digital</h3>
+                    <p>Site, SEO local e perfis otimizados.<br> Resultado: clientes te encontrando no Google e no Instagram antes de encontrar o concorrente.</p>
+                </div>
+                <div class="fazemos-item reveal delay-1">
+                    <h3>Conteúdo & Posicionamento</h3>
+                    <p>Conteúdo estratégico e identidade de marca.<br> Resultado: mais autoridade, mais confiança, e cliente que chega pronto pra comprar.</p>
+                </div>
+                <div class="fazemos-item reveal delay-2">
+                    <h3>Tráfego & Performance</h3>
+                    <p>Campanhas regionais e tráfego pago.<br> Resultado: novos clientes chegando todo mês, de forma constante e mensurável.</p>
+                </div>
+                <div class="fazemos-item reveal" style="border-left: 2px solid var(--gold);">
+                    <h3>Visibilidade nas IAs</h3>
+                    <p>Teu negócio aparece quando alguém pergunta pro ChatGPT, Gemini ou qualquer inteligência artificial.<br> Resultado: presente onde o futuro da busca já está acontecendo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAL -->
+    <section class="section diferencial">
+        <div class="container">
+            <p class="eyebrow reveal" style="color: var(--gold);">Por que a Gentte</p>
+            <h2 class="section-title reveal">Não somos só agência.<br>Somos parceiros.</h2>
+            <blockquote class="diferencial-quote reveal">
+                "Tu já tentou marketing antes. Pagou alguém, recebeu posts bonitos, e no fim do mês nada mudou. Isso não foi marketing. Foi ausência de estratégia."
+            </blockquote>
+            <p class="diferencial-body reveal">Post sem estratégia é decoração. Anúncio sem direção é dinheiro queimado. Antes de criar qualquer coisa, a Gentte senta junto, entende o teu negócio, descobre quem é o teu cliente ideal e onde ele tá. Só depois executa, com propósito e resultado.</p>
+        </div>
+    </section>
+
+    <!-- VISIBILIDADE NAS IAs -->
+    <section class="section" style="background: var(--dark);">
+        <div class="container">
+            <p class="eyebrow reveal" style="color: var(--gold);">O futuro da busca</p>
+            <h2 class="section-title reveal" style="color: #E8E5DC;">Teu negócio aparece<br>nas inteligências artificiais.</h2>
+            <p class="section-body reveal" style="color: #7A7770; max-width: 580px;">Cada vez mais pessoas abrem o ChatGPT, o Gemini ou o Claude e perguntam diretamente: "qual a melhor pizzaria de Sapiranga?" ou "harmonização facial em Novo Hamburgo". <br>A Gentte faz o teu negócio aparecer nessas respostas.</p>
+
+            <div style="margin-top: 3.5rem; display: flex; flex-direction: column; gap: 2px;">
+                <div class="reveal" style="background: #1E1C19; padding: 1.75rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--gold); line-height: 1;">01</span>
+                    <div>
+                        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #D8D5CC; margin-bottom: 0.35rem;">Presente onde o cliente pesquisa</p>
+                        <p style="font-size: 0.84rem; line-height: 1.75; color: #504D4A;">As IAs já respondem perguntas locais. Estruturamos teu negócio pra ser encontrado e recomendado por elas, não apenas pelo Google tradicional.</p>
+                    </div>
+                </div>
+                <div class="reveal delay-1" style="background: #1E1C19; padding: 1.75rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--gold); line-height: 1;">02</span>
+                    <div>
+                        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #D8D5CC; margin-bottom: 0.35rem;">Conteúdo que as IAs citam</p>
+                        <p style="font-size: 0.84rem; line-height: 1.75; color: #504D4A;">Criamos conteúdo claro, estruturado e com autoridade local, do tipo que as inteligências artificiais entendem, confiam e recomendam nas respostas.</p>
+                    </div>
+                </div>
+                <div class="reveal delay-2" style="background: #1E1C19; padding: 1.75rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--gold); line-height: 1;">03</span>
+                    <div>
+                        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #D8D5CC; margin-bottom: 0.35rem;">Na frente da concorrência</p>
+                        <p style="font-size: 0.84rem; line-height: 1.75; color: #504D4A;">A maioria dos negócios locais ainda não sabe que isso existe. Quem estruturar presença nas IAs agora vai colher os resultados pelos próximos anos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="reveal" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 300; font-style: italic; color: var(--gold); margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid #252320; line-height: 1.6;">
+                "Enquanto outras agências te colocam no Google de ontem, a Gentte te prepara pro Google de hoje e pra IA de amanhã."
+            </p>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section">
+        <div class="container">
+            <p class="eyebrow reveal">Como funciona</p>
+            <h2 class="section-title reveal">Simples, direto<br>e sem enrolação.</h2>
+            <div class="passos">
+                <div class="passo reveal">
+                    <div class="passo-num">01</div>
+                    <div>
+                        <h3>Imersão no seu negócio</h3>
+                        <p>Antes de qualquer post ou campanha, a gente entende o que tu vende, quem é o teu cliente e o que te diferencia.</p>
+                    </div>
+                </div>
+                <div class="passo reveal delay-1">
+                    <div class="passo-num">02</div>
+                    <div>
+                        <h3>Estratégia & Estrutura</h3>
+                        <p>Montamos a base digital completa e o plano de posicionamento, tudo com foco em resultado real.</p>
+                    </div>
+                </div>
+                <div class="passo reveal delay-2">
+                    <div class="passo-num">03</div>
+                    <div>
+                        <h3>Acompanhamento contínuo</h3>
+                        <p>Executamos, medimos e ajustamos todo mês. Reunião estratégica mensal e presença constante de verdade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section class="section para-quem">
+        <div class="container">
+            <p class="eyebrow reveal" style="color: var(--gold);">Para quem é</p>
+            <h2 class="section-title reveal">Negócios locais.</h2>
+
+            <p class="para-quem-note reveal">Atendemos negócios locais em todo o Vale do Sinos e região. Pequenas e médias empresas que querem parar de crescer só por indicação e começar a ser encontradas, escolhidas e lembradas no digital.</p>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato">
+        <div class="contato-inner">
+            <!-- FORM -->
+            <div class="reveal">
+                <h2 class="contato-title">Solicitar<br>diagnóstico.</h2>
+                <p class="contato-sub">Preenche o formulário. A gente analisa o teu negócio e entra em contato com um diagnóstico real da tua presença digital.</p>
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Teu nome">
+                    </div>
+                    <div class="form-field">
+                        <label for="wpp">WhatsApp</label>
+                        <input type="tel" id="wpp" placeholder="(51) 99999-9999">
+                    </div>
+                    <div class="form-field">
+                        <label for="segmento">Tipo de negócio</label>
+                        <select id="segmento">
+                            <option value="" disabled selected>Seleciona o teu segmento</option>
+                            <option>Restaurante / Pizzaria / Lancheria</option>
+                            <option>Cafeteria / Padaria</option>
+                            <option>Clinica / Consultório</option>
+                            <option>Academia / Estudio</option>
+                            <option>Loja / Comércio</option>
+                            <option>Imobiliária</option>
+                            <option>Prestador de Serviço</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="msg">Mensagem (opcional)</label>
+                        <textarea id="msg" placeholder="Conta um pouco sobre o teu negócio..."></textarea>
+                    </div>
+                    <button class="btn-form" onclick="enviarWhatsApp()">Solicitar diagnóstico</button>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div>
+                <div class="contato-info reveal">
+                    <a class="contato-info-item" href="https://wa.me/5551998770566" target="_blank" rel="noopener">
+                        <span class="contato-info-icon">✦</span>
+                        <div>
+                            <p class="contato-info-label">WhatsApp</p>
+                            <p class="contato-info-value">(51) 99877-0566</p>
+                            <p class="contato-info-detail">Atendimento imediato</p>
+                        </div>
+                    </a>
+                    <a class="contato-info-item" href="mailto:somosgentte@gmail.com">
+                        <span class="contato-info-icon">✦</span>
+                        <div>
+                            <p class="contato-info-label">E-mail</p>
+                            <p class="contato-info-value">somosgentte@gmail.com</p>
+                            <p class="contato-info-detail">Resposta em até 24h</p>
+                        </div>
+                    </a>
+                    <a class="contato-info-item" href="https://instagram.com/gentte.ag" target="_blank" rel="noopener">
+                        <span class="contato-info-icon">✦</span>
+                        <div>
+                            <p class="contato-info-label">Instagram</p>
+                            <p class="contato-info-value">@gentte.ag</p>
+                            <p class="contato-info-detail">Segue a gente</p>
+                        </div>
+                    </a>
+                    <div class="contato-info-item" style="cursor:default;">
+                        <span class="contato-info-icon">✦</span>
+                        <div>
+                            <p class="contato-info-label">Localização</p>
+                            <p class="contato-info-value">Sapiranga, RS</p>
+                            <p class="contato-info-detail">Vale do Sinos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FECHAMENTO -->
+    <div class="cta-final" style="padding: 5rem 1.5rem;">
+        <p class="cta-final-mark reveal">GENTTE</p>
+        <div class="cta-final-line reveal"></div>
+        <p class="cta-final-sub reveal" style="margin-top:0;">Feito por gente, pra gente. · Sapiranga/RS</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 GENTTE · Agência de Marketing Digital · Sapiranga/RS</p>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        function enviarWhatsApp() {
+            const nome = document.getElementById('nome').value.trim();
+            const wpp = document.getElementById('wpp').value.trim();
+            const seg = document.getElementById('segmento').value;
+            const msg = document.getElementById('msg').value.trim();
+
+            if (!nome || !wpp) {
+                alert('Por favor, preenche o nome e o WhatsApp.');
+                return;
+            }
+
+            let texto = `Olá! Vim pelo site da Gentte e quero solicitar um diagnóstico.%0A%0A`;
+            texto += `*Nome:* ${encodeURIComponent(nome)}%0A`;
+            texto += `*WhatsApp:* ${encodeURIComponent(wpp)}%0A`;
+            if (seg) texto += `*Negócio:* ${encodeURIComponent(seg)}%0A`;
+            if (msg) texto += `*Mensagem:* ${encodeURIComponent(msg)}%0A`;
+
+            window.open(`https://wa.me/5551998770566?text=${texto}`, '_blank');
+        }
+    </script>
+</body>
+</html>
