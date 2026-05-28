@@ -832,18 +832,18 @@
             <div class="reveal">
                 <h2 class="contato-title">Solicitar<br>diagnóstico.</h2>
                 <p class="contato-sub">Preenche o formulário. A gente analisa o teu negócio e entra em contato com um diagnóstico real da tua presença digital.</p>
-                <div class="form-group">
+                <form class="form-group" id="contactForm" action="https://formspree.io/f/xqejnbbb" method="POST">
                     <div class="form-field">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Teu nome">
+                        <input type="text" id="nome" name="nome" placeholder="Teu nome" required>
                     </div>
                     <div class="form-field">
                         <label for="wpp">WhatsApp</label>
-                        <input type="tel" id="wpp" placeholder="(51) 99999-9999">
+                        <input type="tel" id="wpp" name="whatsapp" placeholder="(51) 99999-9999" required>
                     </div>
                     <div class="form-field">
                         <label for="segmento">Tipo de negócio</label>
-                        <select id="segmento">
+                        <select id="segmento" name="segmento">
                             <option value="" disabled selected>Seleciona o teu segmento</option>
                             <option>Restaurante / Pizzaria / Lancheria</option>
                             <option>Cafeteria / Padaria</option>
@@ -857,10 +857,16 @@
                     </div>
                     <div class="form-field">
                         <label for="msg">Mensagem (opcional)</label>
-                        <textarea id="msg" placeholder="Conta um pouco sobre o teu negócio..."></textarea>
+                        <textarea id="msg" name="mensagem" placeholder="Conta um pouco sobre o teu negócio..."></textarea>
                     </div>
-                    <button class="btn-form" onclick="enviarWhatsApp()">Solicitar diagnóstico</button>
-                </div>
+                    <button class="btn-form" type="submit">Solicitar diagnóstico</button>
+                    <div id="form-success" style="display:none; margin-top:1rem; padding:1rem 1.25rem; background:#E5E3DA; border-left:2px solid #B8956A; font-size:0.84rem; color:#4A4740; line-height:1.7;">
+                        Mensagem enviada. A gente entra em contato em breve.
+                    </div>
+                    <div id="form-error" style="display:none; margin-top:1rem; padding:1rem 1.25rem; background:#E5E3DA; border-left:2px solid #9A3A3A; font-size:0.84rem; color:#4A4740; line-height:1.7;">
+                        Algo deu errado. Tenta novamente ou chama no WhatsApp.
+                    </div>
+                </form>
             </div>
 
             <!-- INFO -->
@@ -921,25 +927,39 @@
         }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-        function enviarWhatsApp() {
-            const nome = document.getElementById('nome').value.trim();
-            const wpp = document.getElementById('wpp').value.trim();
-            const seg = document.getElementById('segmento').value;
-            const msg = document.getElementById('msg').value.trim();
+        // Formspree async submit
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const success = document.getElementById('form-success');
+            const error = document.getElementById('form-error');
 
-            if (!nome || !wpp) {
-                alert('Por favor, preenche o nome e o WhatsApp.');
-                return;
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            success.style.display = 'none';
+            error.style.display = 'none';
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (res.ok) {
+                    success.style.display = 'block';
+                    form.reset();
+                } else {
+                    error.style.display = 'block';
+                }
+            } catch(err) {
+                error.style.display = 'block';
             }
 
-            let texto = `Olá! Vim pelo site da Gentte e quero solicitar um diagnóstico.%0A%0A`;
-            texto += `*Nome:* ${encodeURIComponent(nome)}%0A`;
-            texto += `*WhatsApp:* ${encodeURIComponent(wpp)}%0A`;
-            if (seg) texto += `*Negócio:* ${encodeURIComponent(seg)}%0A`;
-            if (msg) texto += `*Mensagem:* ${encodeURIComponent(msg)}%0A`;
-
-            window.open(`https://wa.me/5551998770566?text=${texto}`, '_blank');
-        }
+            btn.textContent = 'Solicitar diagnóstico';
+            btn.disabled = false;
+        });
     </script>
 </body>
 </html>
